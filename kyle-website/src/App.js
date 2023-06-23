@@ -1,15 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+
+function AlertButton(props) {
+	const text = props.text
+	const alrt = props.alert
+	return <button onClick={() => alert(alrt)}>{text}</button>
+}
+
+function makeAlertButtons(propses) {
+	return propses.map((obj) => <div> <AlertButton text={obj.text} alert={obj.alert} /> </div>)
+}
 
 function App(props) {
-	const subject = props.subject;
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-			<p>Hello, {subject}!</p>
-			</header>
-			<body></body>
+		<div>
+			<body>
+				{makeAlertButtons([
+					{text:"hi", alert:"hello!"},
+					{text:"bye", alert:"byebye!"},
+					{text:"argh", alert:"arggghhh!"}])}
+			</body>
 		</div>
 	);
 }

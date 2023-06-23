@@ -1,0 +1,7 @@
+button {
+	color: cornflowerblue;
+}
+
+button:active {
+	border-color: cornflowerblue;
+}
