@@ -1,13 +1,14 @@
-import "./App.css"
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function AlertButton(props) {
-	const text = props.text
-	const alrt = props.alert
-	return <button onClick={() => alert(alrt)}>{text}</button>
+	const text = props.text;
+	const alrt = props.alert;
+	return <button onClick={() => alert(alrt)}>{text}</button>;
 }
 
 function makeAlertButtons(propses) {
-	return propses.map((obj) => <div> <AlertButton text={obj.text} alert={obj.alert} /> </div>)
+	return propses.map((obj) => <div> <AlertButton text={obj.text} alert={obj.alert} /> </div>);
 }
 
 function App(props) {
